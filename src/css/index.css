@@ -1,10 +1,12 @@
+
 body {
-  margin: 0;
   font-family: 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--base-text-600);
+
 }
 
 code {
@@ -14,5 +16,5 @@ code {
 
 .wrapper{
   width: 100%;
-  background: blueviolet;
+  background: var(--base-violet-300);
 }
