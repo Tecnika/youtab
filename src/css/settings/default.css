@@ -1,32 +1,45 @@
-html, body{
-    font-family:  Arial, sans-serif;
-     height: 100%;
-    margin: 0;
-    padding: 0;
-    font-size: 14px;
-    line-height: 1.4;
-    font-size: 16pt;
-    width: auto;
+html,
+body {
+    /* font-size: 14px; */
+    font-size: 14pt;
+    height: 100%;
 }
-h1{
+
+#root,
+.all {
+    height: 100%;
+    /* width: 100vw; */
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+h1 {
     font-size: 1.7em;
 }
-h2{
+
+h2 {
     font-size: 1.5em;
 }
-h3{
+
+h3 {
     font-size: 1.3em;
 }
-h4{
+
+h4 {
     font-size: 1.1em;
 }
-h5{
+
+h5 {
     font-size: 0.95em;
 }
-h6{
+
+h6 {
     font-size: 0.9em;
 }
-p{
+
+p {
     font-size: 1em;
 }
 
@@ -169,6 +182,14 @@ p{
     align-content: stretch;
 }
 
+.grow0 {
+    flex-grow: 0;
+}
+
+.grow1 {
+    flex-grow: 1;
+}
+
 /* 
 flex-basis: 30%|50%|cntent;
 flex-shrink: 0|1|2+
@@ -177,54 +198,27 @@ order: -1|0|2 порядковый номер
 */
 
 /* Flex off */
-.clearfix:after {
-    content: "";
-    display:block;
-    clear: both;
-}
-header, body, .container, .content, footer {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    flex-direction: row;
+header,
+footer {
+    width: calc(100% + 25px);
+    
 }
 
 header {
-    width: auto;
-    height: auto;
     -webkit-box-flex: 0;
     -webkit-flex: none;
     -ms-flex: none;
     flex: none;
+    flex-direction: column;
+transform: translate(-5px, -5px);
+
 }
 
 footer {
-    height: auto;
     -webkit-box-flex: 0;
     -webkit-flex: none;
     -ms-flex: none;
     flex: none;
-}
-
-body {
-    margin: 0 auto;
     flex-direction: column;
-    height: 100%;
-    min-width: 800px;
-    max-width: 1800px;
+    transform: translate(-5px, 5px);
 }
-
-.container {
-    flex-wrap: nowrap;
-    flex: 1 0 auto;
-}
-
-.content {
-    width: 100%;
-    flex-direction: column;
-    flex: 1 1 auto;
-    order: 0;
-}
-

@@ -3,11 +3,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Header from './base/header';
 import Footer from './base/footer';
-function Layout() {
+import { Container } from 'react-bootstrap';
+
+function Layout({ children }) {
   return (
-    <main>
+    <main className='all'>
       <Header />
-      тело
+      <main className='grow1'>
+        <Container>
+          {children}
+        </Container>
+      </main>
       <Footer />
     </main>
   );

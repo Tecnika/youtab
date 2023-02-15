@@ -1,14 +1,4 @@
 
-body {
-  font-family: 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: var(--base-text-600);
-
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -17,4 +7,14 @@ code {
 .wrapper{
   width: 100%;
   background: var(--base-violet-300);
+}
+
+.card{
+  transform: scale(0.95);
+}
+.card:hover{
+  transform: scale(1);
+  -webkit-box-shadow: 0px 0px 50px -20px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 50px -20px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 50px -20px rgba(0,0,0,0.75);
 }

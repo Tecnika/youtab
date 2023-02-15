@@ -3,16 +3,22 @@ import ReactDOM from 'react-dom/client';
 
 import './css/settings/reset.css'
 import './css/settings/colors.css';
-import './css/settings/default.css'
+import './css/settings/default.css';
 import './css/index.css';
 
-import App from './components/Layout';
 import reportWebVitals from './reportWebVitals';
+import Layout from './components/Layout';
+import Block from './components/templates/block';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Layout>
+      Hello
+      <div className='flex wrap'>
+       <Block /> <Block /><Block />
+       </div> 
+    </Layout>
   </React.StrictMode>
 );
 
