@@ -1,13 +1,15 @@
 import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
-import Logo from "./logo";
+import Avatar from "../work_components/avatar";
+import Logo from "../work_components/logo";
 
 
 function Header() {
+    let name = "Tecnika (NK)"
     return (
         <header>
             <Navbar bg="light" expand="lg">
-                <Container>
-                    <Navbar.Brand href="#home">
+                <Container className="a_content_center">
+                    <Navbar.Brand  href="#home">
                         <Logo />
                         {' '}
                         YouTab
@@ -29,7 +31,9 @@ function Header() {
                     </Navbar.Collapse>
                     <Navbar.Collapse className="justify-content-end">
                         <Navbar.Text>
-                            <a href="#login">Tecnika (NK)</a>
+                            <div className="f_flex f_row">
+                                <Avatar name={name}/>
+                                                                <a style={{margin:'5px'}} href="#login">{name}</a></div>
                         </Navbar.Text>
                     </Navbar.Collapse>
                 </Container>

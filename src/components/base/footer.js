@@ -1,22 +1,34 @@
-import { Container, Navbar, Button, ButtonGroup,ToggleButton } from "react-bootstrap";
+import { Container, Navbar, Button, ToggleButtonGroup, ToggleButton } from "react-bootstrap";
 import React, { useState } from 'react';
-import '../../css/bootstrap/sketchy.scss'
-// import '../../css/bootstrap/lux.scss'
+import '../../bootstrap/sketchy.scss'
+// import '../../bootstrap/lux.scss'
+// const StyleSketchy = React.lazy(() => import('../../bootstrap/sketchy_style'));
+// const StyleLux = React.lazy(() => import('../../bootstrap/lux_style'));
+
+
+
 function Footer() {
     const [checked, setChecked] = useState(false);
     const [radioValue, setRadioValue] = useState('2');
-  
+
     const radios = [
-      { name: 'Lux', value: '1' },
-      { name: 'Sketchy', value: '2' }
+        { name: 'Lux', value: '1' },
+        { name: 'Sketchy', value: '2' }
     ];
+    // const onChange = (value) => {
+      //     if (value === '2' )
+    //         <StyleSketchy/>
+    //     else  {
+    //         <StyleLux/>
+            
+    //     }}
     return (
         <footer>
             <Navbar>
                 <Container>
                     Футер
                     <div>Стиль:{' '}
-                        <ButtonGroup>
+                        <ToggleButtonGroup type="radio" name="style" defaultValue={1} > {/* onChange={onChange} */}
                             {radios.map((radio, idx) => (
                                 <ToggleButton
                                     key={idx}
@@ -31,8 +43,9 @@ function Footer() {
                                     {radio.name}
                                 </ToggleButton>
                             ))}
-                        </ButtonGroup>
-                       </div>
+
+                        </ToggleButtonGroup>
+                    </div>
                 </Container>
             </Navbar>
         </footer>

@@ -9,15 +9,17 @@ import './css/index.css';
 import reportWebVitals from './reportWebVitals';
 import Layout from './components/Layout';
 import Block from './components/templates/block';
+import App from './app';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Layout>
       Hello
-      <div className='flex wrap'>
-       <Block /> <Block /><Block />
-       </div> 
+      <App />
+      <div className='f_flex f_wrap'>
+        <Block /> <Block /><Block />
+      </div>
     </Layout>
   </React.StrictMode>
 );

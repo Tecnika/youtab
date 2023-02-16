@@ -45,44 +45,44 @@ p {
 
 /* Flex on*/
 /*  flex-direction */
-.row {
+.f_row {
     display: flex;
     flex-direction: row;
 }
 
-.column {
+.f_column {
     display: flex;
     flex-direction: column;
 }
 
 /*  flex-wrap */
-.wrap {
+.f_wrap {
     display: flex;
     flex-wrap: wrap;
 }
 
-.nowrap {
+.f_nowrap {
     display: flex;
     flex-wrap: nowrap;
 }
 
 /*  flex-flow */
-.rowwrap {
+.f_rowwrap {
     display: flex;
     flex-flow: row wrap;
 }
 
-.rownowrap {
+.f_rownowrap {
     display: flex;
     flex-flow: row nowrap;
 }
 
-.columnwrap {
+.f_columnwrap {
     display: flex;
     flex-flow: column wrap;
 }
 
-.columnnowrap {
+.f_columnnowrap {
     display: flex;
     flex-flow: column nowrap;
 }
@@ -201,7 +201,7 @@ order: -1|0|2 порядковый номер
 header,
 footer {
     width: calc(100% + 25px);
-    
+    z-index: 999999;
 }
 
 header {
