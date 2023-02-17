@@ -1,5 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 import {
     GoogleAuthProvider,
     getAuth,
@@ -22,16 +23,18 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyD3aEmth7qvqUuO41KNvmZryyMPakNCjzE",
-    authDomain: "youtab-a12a7.firebaseapp.com",
-    projectId: "youtab-a12a7",
-    storageBucket: "youtab-a12a7.appspot.com",
-    messagingSenderId: "641097715789",
-    appId: "1:641097715789:web:9b1f16cd9e363151098c04"
-};
+    apiKey: "AIzaSyBJ4v-YNCqCX17UAcAF8cPxgiJqe2RkVT4",
+    authDomain: "youtab-73fa2.firebaseapp.com",
+    projectId: "youtab-73fa2",
+    storageBucket: "youtab-73fa2.appspot.com",
+    messagingSenderId: "267127701982",
+    appId: "1:267127701982:web:d2d8d290fcfeb539c91d4f",
+    measurementId: "G-DYZHHZFG16"
+  };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 const auth = getAuth(app);
 const db = getFirestore(app);
 const googleProvider = new GoogleAuthProvider();
@@ -91,6 +94,7 @@ const logout = () => {
 };
 const firestore = getFirestore(app)
 export {
+    analytics,
     auth,
     db,
     firestore,
