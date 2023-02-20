@@ -27,7 +27,7 @@ function Dashboard() {
     }, [user, loading]);
     return (
         <div className="dashboard">
-            <div className="dashboard__container">
+            <div className="dashboard__container f_flex f_row">
                 <Avatar name={name}/>
                 <div>{name}</div>
                 <div>{user?.email}</div>

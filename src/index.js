@@ -10,6 +10,7 @@ import reportWebVitals from './reportWebVitals';
 import Layout from './components/Layout';
 import Block from './components/templates/block';
 import App from './app';
+import Auth from './components/work_components/auth';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,6 +18,7 @@ root.render(
     <Layout>
       Hello
       <App />
+      <Auth />
       <div className='f_flex f_wrap'>
         <Block /> <Block /><Block />
       </div>
